@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Creator Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>💬 Creator Chatbot</h1>
+                <span class="status">Online</span>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <span class="message-author">Bot</span>
+                    <div class="message-content">
+                        Hey babe! I'm here to chat with you 💕 Ask me anything!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Type your message..." 
+                    autocomplete="off"
+                >
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>Om Chatbotten</h3>
+            <p>Denna AI-chatbot är tränad på verkliga konversationer och försöker efterlikna creators kommunikationsstil.</p>
+            <div id="stats">
+                <p>Laddar statistik...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator Chatbot - Riktig AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_ai.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-left">
+                    <h1>🤖 AI Creator Chatbot</h1>
+                    <span class="ai-badge">AI-Powered</span>
+                </div>
+                <div class="header-right">
+                    <span class="status">● Online</span>
+                    <button id="resetBtn" class="reset-btn">↺ Reset</button>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <span class="message-author">AI Bot</span>
+                    <div class="message-content">
+                        Hey babe! 💕 I'm an AI trained on real creator conversations. Every response I give is unique and generated just for you! Ask me anything... 😘
+                    </div>
+                    <span class="ai-indicator">✨ AI Generated</span>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Type your message..." 
+                    autocomplete="off"
+                >
+                <button id="sendButton">
+                    <span id="sendText">Send</span>
+                    <span id="loadingSpinner" class="spinner hidden"></span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>🧠 AI Creator Chatbot</h3>
+            <div class="info-section">
+                <h4>Hur det fungerar:</h4>
+                <ul>
+                    <li>✅ <strong>Riktig AI</strong> - Inte bara förvalda svar</li>
+                    <li>✅ <strong>Tränad på din data</strong> - 22,388 konversationer</li>
+                    <li>✅ <strong>Unika svar</strong> - Varje svar är AI-genererat</li>
+                    <li>✅ <strong>Creators stil</strong> - Efterliknar kommunikationsstilen</li>
+                </ul>
+            </div>
+            
+            <div id="stats" class="stats-section">
+                <p>Laddar AI-statistik...</p>
+            </div>
+            
+            <div class="tips-section">
+                <h4>💡 Tips:</h4>
+                <p>• Ställ personliga frågor</p>
+                <p>• Be om flirtiga svar</p>
+                <p>• Testa olika ämnen</p>
+                <p>• Varje svar är unikt!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/chat_ai.js') }}"></script>
+</body>
+</html>
